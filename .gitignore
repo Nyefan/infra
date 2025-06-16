@@ -1,0 +1,10 @@
+**/*
+
+!.gitignore
+!.tool-versions
+!LICENSE
+!README.md
+
+!matrix
+!matrix/*
+!matrix/**/*

@@ -1,0 +1,52 @@
+[global]
+server_name = "nyefan.org"
+address = "0.0.0.0"
+port = 8448
+database_path = "/var/lib/tuwunel"
+database_backup_path = "/opt/tuwunel/rocks-db-backups"
+registration_token_file = "/etc/tuwunel/.reg_token"
+turn_secret_file = "/etc/tuwunel/.turn_secret"
+allow_registration = true
+new_user_displayname_suffix = "🎔"
+require_auth_for_profile_requests = true
+lockdown_public_room_directory = true
+allow_room_creation = false
+allow_unstable_room_versions = false
+trusted_servers = ["matrix.org"]
+query_trusted_key_servers_first_on_join = false
+login_via_existing_session = false
+turn_uris = ["turns:turn.nyefan.org?transport=udp","turns:turn.nyefan.org?transport=tcp"]
+admin_execute = ["server admin-notice tuwunel has started up at $(date)"]
+url_preview_check_root_domain = true
+database_backups_to_keep = 14
+cache_capacity_modifier = 1.0
+db_cache_capacity_mb = 256.0
+db_write_buffer_capacity_mb = 56.0
+query_over_tcp_only = true
+ip_lookup_strategy = 3
+max_request_size = 20971520 #20MiB
+rocksdb_max_log_file_size = 41943040 #40MB
+rocksdb_log_time_to_roll = 31536000 #1 year
+startup_netburst_keep = -1
+
+[global.tls]
+
+# Path to a valid TLS certificate file.
+#
+# example: "/path/to/my/certificate.crt"
+#
+#certs =
+
+# Path to a valid TLS certificate private key.
+#
+# example: "/path/to/my/certificate.key"
+#
+#key =
+
+# Whether to listen and allow for HTTP and HTTPS connections (insecure!)
+#
+#dual_protocol = false
+
+[global.well_known]
+client = "https://matrix.nyefan.org"
+server = "matrix.nyefan.org:443"
