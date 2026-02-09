@@ -9,7 +9,7 @@ kill_signal = 'SIGTERM'
 kill_timeout = '2m0s'
 
 [build]
-  image = 'ghcr.io/matrix-construct/tuwunel:v1.0.0-release-all-x86_64-linux-gnu'
+  image = 'ghcr.io/matrix-construct/tuwunel:v1.5.0'
 
 [deploy]
   strategy = 'rolling'
@@ -19,7 +19,7 @@ kill_timeout = '2m0s'
 [env]
   TUWUNEL_CONFIG = '/etc/tuwunel/tuwunel.toml'
 
-[[mounts]]
+[mounts]
   source = 'nyefan_matrix_data'
   destination = '/var/lib/tuwunel'
   initial_size = '1GB'
@@ -32,7 +32,7 @@ kill_timeout = '2m0s'
   force_https = true
   auto_stop_machines = 'suspend'
   auto_start_machines = true
-  min_machines_running = 0
+  min_machines_running = 1
 
   [[http_service.checks]]
     interval = '30s'

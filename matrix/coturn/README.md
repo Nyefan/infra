@@ -8,7 +8,7 @@ flyctl deploy
 
 copy TURN_SECRET into `coturn.conf`
 ```shell
-flyctl secrets set --app "nyefan-coturn" "TUWUNEL_TURN_SECRET=${TUWUNEL_TURN_SECRET}"
+flyctl secrets set --app "nyefan-coturn" "TUWUNEL_TURN_SECRET=$(<../tuwunel/.tuwunel_turn_secret)"
 ```
 
 ## Creating certificates

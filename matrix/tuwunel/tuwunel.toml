@@ -2,8 +2,8 @@
 server_name = "nyefan.org"
 address = "0.0.0.0"
 port = 8448
-database_path = "/var/lib/tuwunel"
-database_backup_path = "/opt/tuwunel/rocks-db-backups"
+database_path = "/var/lib/tuwunel/rocks-db"
+database_backup_path = "/var/lib/tuwunel/rocks-db-backups"
 registration_token_file = "/etc/tuwunel/.reg_token"
 turn_secret_file = "/etc/tuwunel/.turn_secret"
 allow_registration = true
